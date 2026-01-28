@@ -1,25 +1,80 @@
 # Dynamic Task Wallpaper Generator
 
-Transform your Windows desktop wallpaper into a productivity tool! This project automatically overlays your daily tasks onto a randomly selected wallpaper, keeping your to-do list always visible.
+Automatically overlay your daily tasks onto your Windows desktop wallpaper. A simple productivity tool that keeps your to-do list always visible!
 
-## ✨ Features
+## 🎯 What It Does
 
-- **Random Wallpaper Selection**: Picks a different wallpaper from your collection each time
-- **Task Overlay**: Displays your tasks in a clean, readable format on your wallpaper
-- **Visual Hierarchy**: 
-  - Bold titles for section headers
-  - Regular weight for tasks
-  - 80% opacity for completed tasks
-- **Smart Layout**: 
-  - Tasks appear in the right 30% of your screen
-  - Semi-transparent dark background for readability
-  - Proper padding and spacing
-- **Word Wrapping**: Long task names automatically wrap to fit
-- **Markdown Support**: Write your tasks in simple markdown format
-- **Custom Typography**: Uses Ubuntu font family for a modern look
+- Randomly picks a wallpaper from your collection
+- Overlays your tasks in a clean, readable format
+- Updates your Windows wallpaper automatically
+- Completed tasks appear at 80% opacity (dimmed)
 
-## 📋 Prerequisites
+## 📋 Quick Setup
 
-1. **Python 3.x** - [Download here](https://www.python.org/downloads/)
-2. **Pillow Library** - Install via:
+### Prerequisites
 ```bash
+pip install Pillow
+```
+
+### File Structure
+```
+your_folder/
+├── update_wallpaper.bat          # Run this!
+├── _todo.txt                     # Your tasks
+└── _wallpapers/
+    ├── create_wallpaper.py       # Generator script
+    ├── image1.jpg                # Add wallpapers here
+    └── wallpaper_with_tasks.jpg  # Output
+```
+
+### Your Tasks File (`_todo.txt`)
+```markdown
+## TODAY TASKS
+- [ ] Ahmed Ramadan – WhatsApp Update  
+- [ ] Bilal System  
+- [ ] QL-ME – Certification System
+
+## COMPLETED TASKS
+- [x] QuranOasis – Emails Issue  
+- [x] Chrome extension
+```
+
+### Run It
+Double-click `update_wallpaper.bat` - done! ✨
+
+## 🎨 Features
+
+- **30% width** task box on the right side
+- **5% margins** from top and right edge
+- **Ubuntu Bold** for headers, **Ubuntu Regular** for tasks
+- **Semi-transparent** dark overlay for readability
+- **Word wrapping** for long task names
+- **Random wallpaper** selection for variety
+
+## 🔧 Customization
+
+Edit `create_wallpaper.py` to adjust:
+- Box size: `tasks_width_percent = 0.30`
+- Margins: `left_margin_percent = 0.05`
+- Font sizes: `32` (headers), `20` (tasks)
+- Overlay color: `fill=(0, 0, 0, 200)`
+- Spacing: `section_gap = 30`
+
+## 💡 Pro Tips
+
+1. Add multiple wallpapers to `_wallpapers` for variety
+2. Use fun/meme wallpapers to stay motivated
+3. Set up Windows Task Scheduler to run daily
+4. Update `_todo.txt` throughout the day
+
+## 🐛 Troubleshooting
+
+**Font not found?** Script falls back to Arial automatically.
+
+**Wallpaper not changing?** Check `_wallpapers/wallpaper_with_tasks.jpg` was created - you can set it manually.
+
+**No images found?** Add `.jpg`, `.png`, or `.gif` files to `_wallpapers` folder.
+
+---
+
+Made with ❤️ for productivity enthusiasts
