@@ -1,0 +1,11 @@
+TODAY TASKS
+  
+- [ ] n8n – Chatbot  
+- [ ] n8n – pdf-summarizer
+
+
+
+======================================
+COMPLETED TASKS
+
+- [x] Chrome extension for saving and closing tabs - Claude
